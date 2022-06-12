@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSP Game</title>
+    <link rel="icon" href="./assets/images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="header-content container">
+      <img src="./assets/images/logo.svg" />
+      <section class="score">
+        <p class="clr-score">Score</p>
+        <p class="clr-dark" id="score-text">0</p>
+      </section>
+    </header>
+    <main class="main-content container">
+      <section class="" id="choices">
+        <div>
+          <button class="choices-buttons" id="paper-btn" data-name="paper">
+            <img src="./assets/images/icon-paper.svg" alt="paper" />
+          </button>
+          <button
+            class="choices-buttons"
+            id="scissors-btn"
+            data-name="scissors"
+          >
+            <img src="./assets/images/icon-scissors.svg" alt="scissors" />
+          </button>
+          <img src="./assets/images/bg-triangle.svg" alt="triangle" />
+          <button class="choices-buttons" id="rock-btn" data-name="rock">
+            <img src="./assets/images/icon-rock.svg" alt="rock" />
+          </button>
+        </div>
+      </section>
+
+      <section class="hide-content" id="selected-choice">
+        <div>
+          <p>Your pick</p>
+          <div class="selected-choices-img">
+            <img src="" alt="" id="user-choice-img" />
+          </div>
+        </div>
+        <div id="game-result">
+          <lottie-player
+            src=""
+            background="transparent"
+            speed="1"
+            style="width: 100%; height: 300px; position: absolute"
+            loop
+            autoplay
+          ></lottie-player>
+          <p id="state-text"></p>
+          <button id="playagain-btn">PLAYAGAIN</button>
+        </div>
+        <div>
+          <p>House's pick</p>
+          <div class="selected-choices-img">
+            <p id="countdown-timer"></p>
+            <img src="" alt="" id="comp-choice-img" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section id="modal" class="hide-content">
+        <section id="modal-content">
+          <div id="modal-header">
+            <p>RULES</p>
+            <button id="modal-close-btn">
+              <img src="./assets/images/icon-close.svg" alt="close" />
+            </button>
+          </div>
+          <img src="./assets/images/image-rules.svg" alt="rules" />
+        </section>
+      </section>
+      <button id="rules-btn">RULES</button>
+    </footer>
+  </body>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="index.js"></script>
+</html>
